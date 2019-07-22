@@ -1,4 +1,18 @@
-# Magnum Foundation * Photography Practice —— 7/14 Aperture讲座笔记
+import { withRouter } from 'next/router'
+import BlogPost from '../../components/layouts/blog-post'
+
+export const meta = {
+  published: true,
+  publishedAt: '2019-07-15',
+  title: 'Magnum Foundation x Photography Practice —— 7/14 Aperture讲座笔记',
+  tags: ['Aperture', '讲座']
+}
+
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    {children}
+  </BlogPost>
+))
 
 讲师：史阳琨
 
@@ -73,7 +87,7 @@ http://www.dripbook.com/hhargreaves/portfolio/no-seconds
 
 [Diary](https://vimeo.com/18497543)
 
-[Sleeping Soldiers](https:// https://www.magnumphotos.com/newsroom/conflict/sleeping-soldiers-tim-hetherington/)
+[Sleeping Soldiers](https://www.magnumphotos.com/newsroom/conflict/sleeping-soldiers-tim-hetherington/)
 
 #### Visual Investigations™ at The New York Times
 
