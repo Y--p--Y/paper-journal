@@ -1,8 +1,10 @@
+import { siteMeta } from '../blog.config'
+
 function Footer () {
   return (
-    <footer>
+    <footer className="p-4 bg-purple-900 text-center text-white">
       <p>
-
+        {siteMeta.author} ❤️
       </p>
     </footer>
   )

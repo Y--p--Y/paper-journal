@@ -61,11 +61,6 @@ const Blog = ({ router, page = 1 }) => {
           </li>
         )}
       </ul>
-      <style jsx>{`
-        header {
-          margin-bottom: 3em;
-        }
-      `}</style>
     </Layout>
   )
 }

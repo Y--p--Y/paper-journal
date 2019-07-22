@@ -1,9 +1,9 @@
 module.exports = {
   siteMeta: {
-    title: 'Paper Journal',
+    title: '一本摘抄本',
     author: 'Rebecca Lu',
     image: '/static/site-feature.png',
-    description: 'My site for photography',
+    description: '视觉笔记',
     siteUrl: 'https://paper-journal.y--p--y.now.sh',
     postsPerPage: 10
   }

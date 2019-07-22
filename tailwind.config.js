@@ -1,0 +1,16 @@
+module.exports = {
+  theme: {
+    // textColor: {
+    //   'primary': '#3490dc',
+    //   'secondary': '#ffed4a',
+    //   'danger': '#e3342f',
+    // },
+    extend: {
+      container: {
+        center: true,
+      },
+    }
+  },
+  variants: {},
+  plugins: []
+}

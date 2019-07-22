@@ -2,30 +2,17 @@ import Link from 'next/link'
 import PublishedAt from './utils/published-at'
 
 const Post = ({ title, summary, date, path }) => (
-  <article>
-    <header>
+  <article className="pb-4 border-dotted border-b-4 border-red-400">
+    <header className="mb-2">
       <h2>
         <Link href={path}>
-          <a>{title}</a>
+          <a className="no-underline hover:underline text-purple-900">{title}</a>
         </Link>
       </h2>
 
       <PublishedAt link={path} date={date} />
     </header>
-    <div className='post-summary'>{summary}</div>
-    <style jsx>{`
-      article {
-        margin-bottom: 2em;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      .post-summary {
-        margin-top: 1em;
-      }
-    `}</style>
+    <div className="text-gray-700">{summary}</div>
   </article>
 )
 
