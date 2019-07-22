@@ -24,7 +24,7 @@ function BlogPost ({ path, meta, children }) {
             <PublishedAt date={meta.publishedAt} link={path} />
           </div>
         </header>
-        <div className='e-content'>{children}</div>
+        <div className='text-gray-800 e-content'>{children}</div>
         <footer>
           {(previousPost || nextPost) && (
             <div className='post-pagination'>

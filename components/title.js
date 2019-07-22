@@ -5,23 +5,20 @@ const Title = ({ path }) => (
   <>
     {path === '/' ? (
       <h1>
-        <a href={siteMeta.siteUrl}>{siteMeta.title}</a>
+        <a className="text-white" href={siteMeta.siteUrl}>
+          {siteMeta.title}
+        </a>
       </h1>
     ) : (
       <p>
         <Link href='/'>
-          <a rel='me'>{siteMeta.title}</a>
+          <a className="text-white" rel='me'>{siteMeta.title}</a>
         </Link>
       </p>
     )}
     <style jsx>{`
       h1 {
         margin-top: 0;
-      }
-
-      a {
-        color: #333;
-        text-decoration: none;
       }
 
       p {

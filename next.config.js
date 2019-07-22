@@ -1,3 +1,4 @@
+const withCSS = require('@zeit/next-css')
 const withMDX = require('@zeit/next-mdx')({
   extension: /.mdx?$/,
   options: {
@@ -5,7 +6,7 @@ const withMDX = require('@zeit/next-mdx')({
   }
 })
 
-module.exports = withMDX({
+module.exports = withCSS(withMDX({
   target: 'serverless',
   pageExtensions: ['js', 'jsx', 'mdx', 'md'],
   webpack: (config, { defaultLoaders, isServer, dev }) => {
@@ -14,29 +15,6 @@ module.exports = withMDX({
       fs: 'empty',
       module: 'empty'
     }
-
-    config.module.rules.push(
-      {
-        test: /\.css$/,
-        use: [
-          defaultLoaders.babel,
-          {
-            loader: require('styled-jsx/webpack').loader,
-            options: {
-              type: 'global'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: '@svgr/webpack'
-          }
-        ]
-      }
-    )
 
     if (isServer && !dev) {
       const originalEntry = config.entry
@@ -50,4 +28,4 @@ module.exports = withMDX({
 
     return config
   }
-})
+}))

@@ -1,12 +1,5 @@
 const Container = ({ children }) => (
-  <>
-    <div>{children}</div>
-    <style jsx>{`
-      max-width: 45rem;
-      margin: 0 auto;
-      padding: 0 1em;
-    `}</style>
-  </>
+  <div className="flex min-h-screen flex-col">{children}</div>
 )
 
 export default Container
