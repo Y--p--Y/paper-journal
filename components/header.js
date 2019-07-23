@@ -9,7 +9,7 @@ function Header ({ path, pageTitle, ogImage }) {
     <>
       <Head title={pageTitle} ogImage={ogImage} />
 
-      <header className="p-2 bg-purple-900 text-white mb-4">
+      <header className="flex p-2 bg-purple-900 text-white mb-4">
         <Title path={path} />
         <Nav />
       </header>

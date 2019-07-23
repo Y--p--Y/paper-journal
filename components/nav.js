@@ -1,16 +1,10 @@
 import Link from 'next/link'
 
 const Nav = () => (
-  <nav>
-    <style jsx>{`
-      nav {
-        display: flex;
-      }
-
-      a:not(:last-child) {
-        margin-right: 1em;
-      }
-    `}</style>
+  <nav className="flex items-center">
+    <Link href='/slides'>
+      <a className="ml-2 text-white">杂谈</a>
+    </Link>
   </nav>
 )
 
