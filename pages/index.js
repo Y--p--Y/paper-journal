@@ -1,13 +1,11 @@
-import { withRouter } from 'next/router'
 import _range from 'lodash.range'
 import Link from 'next/link'
 import pagination from 'pagination'
-import Layout from '../components/layouts/default'
 import Post from '../components/blog-index-item'
 import blogposts from '../posts/index'
 import { siteMeta } from '../blog.config'
 
-const Blog = ({ router, page = 1 }) => {
+const Blog = ({ page = 1 }) => {
   const paginator = new pagination.SearchPaginator({
     prelink: '/',
     current: page,
@@ -25,7 +23,7 @@ const Blog = ({ router, page = 1 }) => {
   const results = _range(fromResult - 1, toResult)
 
   return (
-    <Layout pageTitle='Blog' path={router.pathname}>
+    <>
       {blogposts
         .filter((_post, index) => results.indexOf(index) > -1)
         .map((post, index) => (
@@ -61,7 +59,7 @@ const Blog = ({ router, page = 1 }) => {
           </li>
         )}
       </ul>
-    </Layout>
+    </>
   )
 }
 
@@ -69,4 +67,4 @@ Blog.getInitialProps = async ({ query }) => {
   return query ? { page: query.page } : {}
 }
 
-export default withRouter(Blog)
+export default Blog

@@ -6,7 +6,7 @@ const Post = ({ title, summary, date, path }) => (
     <header className="mb-2">
       <h2>
         <Link href={path}>
-          <a className="no-underline hover:underline text-purple-900">{title}</a>
+          <a className="no-underline hover:text-white hover:bg-purple-900 text-purple-900">{title}</a>
         </Link>
       </h2>
 

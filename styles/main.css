@@ -10,9 +10,6 @@ h2 {
 h3 {
   @apply text-lg font-bold;
 }
-a {
-  @apply text-red-500 no-underline;
-}
 
 /* purgecss end ignore */
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../header'
-import Footer from '../footer'
 import Container from '../container'
 
 import '../../styles/main.css'
@@ -12,7 +11,6 @@ function Layout ({ path, children, pageTitle, ogImage }) {
 
       <main className="flex-grow container md-auto px-4">{children}</main>
 
-      <Footer />
     </Container>
   )
 }

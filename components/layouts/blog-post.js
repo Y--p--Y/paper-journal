@@ -1,7 +1,4 @@
-import Link from 'next/link'
-import { siteMeta } from '../../blog.config'
-import Layout from './default'
-import SyntaxHighlight from '../syntax-highlight'
+import Head from '../head'
 import PublishedAt from '../utils/published-at'
 import blogposts from '../../posts/index'
 import NextPrevPost from '../next-prev-post'
@@ -14,8 +11,11 @@ function BlogPost ({ path, meta, children }) {
   const nextPost = blogposts[currentPostIndex - 1]
 
   return (
-    <Layout pageTitle={meta.title} ogImage={meta.image}>
-      <SyntaxHighlight />
+    <>
+      <Head
+        title={meta.title}
+        description={meta.summary}
+      />
       <article className='h-entry'>
         <header>
           <h1 className='p-name'>{meta.title}</h1>
@@ -46,29 +46,7 @@ function BlogPost ({ path, meta, children }) {
           )}
         </footer>
       </article>
-      <style jsx>{`
-        header {
-          margin-bottom: 2em;
-        }
-
-        [rel='author'] {
-          margin-left: 1em;
-        }
-
-        article {
-          margin-bottom: 2em;
-        }
-
-        footer {
-          margin-top: 2em;
-        }
-
-        .post-pagination {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-      `}</style>
-    </Layout>
+    </>
   )
 }
 

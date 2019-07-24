@@ -11,7 +11,7 @@ const Title = ({ path }) => (
   ) : (
     <p className="flex-grow font-bold text-xl">
       <Link href='/'>
-        <a className="text-white" rel='me'>{siteMeta.title}</a>
+        <a className="text-purple-200 hover:text-white" rel='me'>{siteMeta.title}</a>
       </Link>
     </p>
   )
