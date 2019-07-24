@@ -1,10 +1,25 @@
-import { withRouter } from 'next/router' import BlogPost from '../../components/layouts/blog-post'
+import { withRouter } from 'next/router'
+import BlogPost from '../../components/layouts/blog-post'
 
-export const meta = { published: true, publishedAt: '2019-07-25', title: '当代的景观——史蒂芬肖之后的美国摄影', summary: '7/27 fujifilm X-Space 讲座预习+笔记', tags: ['fujifil x-space', '讲座', 'stephen shore', 'amani willett'] }
+export const meta = {
+  published: true,
+  publishedAt: '2019-07-25',
+  title: '当代的景观——史蒂芬肖之后的美国摄影',
+  summary: '7/27 fujifilm X-Space 讲座预习+笔记',
+  tags: ['fujifil x-space', '讲座', 'stephen shore', 'amani willett']
+}
 
-export default withRouter(({ children, router }) => ( {children} ))
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    {children}
+  </BlogPost>
+))
 
 ## Stephen Shore
+
+[Shady character: how Stephen Shore taught America to see in living colour](https://www.theguardian.com/artanddesign/2015/jul/09/stephen-shore-america-colour-photography-1970s)
+
+### American Surfaces
 
 [American Surfaces](http://stephenshore.net/photographs/americansurfaces/index.php) 
 
@@ -18,15 +33,22 @@ export default withRouter(({ children, router }) => ( {children} ))
 > 
 > -- Stephen Shore
 
-### Reviews
+#### Reviews
 
 > AMERICAN SURFACES is styled as a photo-diary of Shore's travels across America, bridging the gap between the road trip tradition of Walker Evans and Robert Frank and the fascination with the ordinary exhibited by Bernd and Hilla Becher and Martin Parr.
 
-### My Picks
+#### My Picks
+
+![](https://images.newrepublic.com/b53b983785a067fcd4d2689739a131a770134ea7.jpeg)
+
+![](https://images.newrepublic.com/5ce73b052de4b64f1859bcec734b2a126e085653.jpeg)
+
+### Uncommon Places
 
 ## Amani Willett
 
 [http://amaniwillett.com/](http://amaniwillett.com/)
+
 
 ### The Disappearance of Joseph Plummer
 
