@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PublishedAt from './utils/published-at'
 
 const Post = ({ title, summary, date, path }) => (
-  <article className="pb-4 border-dotted border-b-4 border-red-400">
+  <article className="pb-4 dotted-border border-b-4">
     <header className="mb-2">
       <h2>
         <Link href={path}>
