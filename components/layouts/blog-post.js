@@ -2,6 +2,7 @@ import Head from '../head'
 import PublishedAt from '../utils/published-at'
 import blogposts from '../../posts/index'
 import NextPrevPost from '../next-prev-post'
+import Tags from '../tags'
 
 function BlogPost ({ path, meta, children }) {
   const currentPostIndex = blogposts
@@ -25,6 +26,10 @@ function BlogPost ({ path, meta, children }) {
           </div>
         </header>
         <div className='text-gray-800 e-content'>{children}</div>
+        <div className="mt-12">
+          <Tags tags={meta.tags} />
+        </div>
+
         <footer>
           {(previousPost || nextPost) && (
             <div className='post-pagination'>

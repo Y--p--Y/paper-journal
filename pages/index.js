@@ -33,6 +33,7 @@ const Blog = ({ page = 1 }) => {
             summary={post.summary}
             date={post.publishedAt}
             path={post.path}
+            tags={post.tags}
           />
         ))}
 

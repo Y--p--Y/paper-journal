@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import PublishedAt from './utils/published-at'
+import Tags from './tags'
 
-const Post = ({ title, summary, date, path }) => (
-  <article className="pb-4 dotted-border border-b-4">
+const Post = ({ tags, title, summary, date, path }) => (
+  <article className="pb-1 dotted-border border-b-4">
     <header className="mb-2">
       <h2>
         <Link href={path}>
@@ -13,6 +14,9 @@ const Post = ({ title, summary, date, path }) => (
       <PublishedAt link={path} date={date} />
     </header>
     <div className="text-gray-700">{summary}</div>
+    <div className="mt-2">
+      <Tags tags={tags} />
+    </div>
   </article>
 )
 
