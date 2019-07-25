@@ -5,16 +5,15 @@ const NextPrevPost = ({ title, path, position }) => {
   const isNext = position === 'next'
   return (
     <>
+      <hr className="dotted-border border-t-4 my-4" />
       <Link href={path}>
-        <a>
+        <a className="flex flex-col text-purple-800 hover:text-white hover:bg-purple-800 py-2">
           <small>Read {position} post </small>
-          {title}
+          <strong>{title}</strong>
         </a>
       </Link>
       <style jsx>{`
         a {
-          display: flex;
-          flex-direction: column;
           ${isNext ? 'text-align: right;' : ''}
           ${isNext ? 'grid-column: 2 / 2;' : ''}
         }
