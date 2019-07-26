@@ -22,6 +22,9 @@ h4 {
   @apply my-1 max-w-full mx-auto;
 }
 
+ul li::before {
+  content: '💡'
+}
 /* purgecss end ignore */
 
 @tailwind components;
