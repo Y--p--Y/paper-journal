@@ -26,6 +26,7 @@ function PhotoBookVideos() {
         <header>
           <h2>翻影集视频合集</h2>
         </header>
+        <Anchor href="https://www.bilibili.com/video/av51853906">日本の写真家（全40卷）</Anchor>
         {videos}
       </article>
     </>
