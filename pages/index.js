@@ -2,7 +2,7 @@ import _range from 'lodash.range'
 import Link from 'next/link'
 import pagination from 'pagination'
 import Post from '../components/blog-index-item'
-import blogposts from '../posts/index'
+import { posts as blogposts } from '../data/index'
 import { siteMeta } from '../blog.config'
 
 const Blog = ({ page = 1 }) => {

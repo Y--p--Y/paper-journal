@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import blogposts from '../posts/index'
+import { posts as blogposts } from '../data/index'
 
 // TODO: list all tags and posts
 const Tags = () => {
