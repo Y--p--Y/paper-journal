@@ -1,6 +1,6 @@
 import Head from '../head'
 import PublishedAt from '../utils/published-at'
-import blogposts from '../../posts/index'
+import { posts as blogposts } from '../../data/index'
 import NextPrevPost from '../next-prev-post'
 import Tags from '../tags'
 

@@ -9,8 +9,12 @@ import preval from 'babel-plugin-preval/macro'
  * time when Node is available.
  */
 
-const posts = preval`
+exports.posts = preval`
     module.exports = require('./get-blog-posts.js');
 `
 
-module.exports = posts
+exports.photoBookVideos = preval`
+    module.exports = require('./get-photo-videos.js');
+`
+
+
