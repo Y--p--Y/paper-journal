@@ -1,13 +1,7 @@
 import Blockquote from './Blockquote'
-
-const a = props => (
-  <a
-    className="p-1 text-red-500 no-underline hover:bg-red-500 hover:text-white"
-    {...props}
-  />
-)
+import Anchor from './Anchor'
 
 export default {
-  a,
+  a: Anchor,
   blockquote: Blockquote
 }
