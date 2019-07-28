@@ -11,6 +11,7 @@ module.exports = files
   .map((file, index) => {
     const name = path.join(DIR, file)
     const contents = fs.readFileSync(name, 'utf-8')
+    const stats = fs.statSync(name);
     const match = META.exec(contents)
 
     if (!match || typeof match[1] !== 'string') {
@@ -23,6 +24,7 @@ module.exports = files
     return {
       ...meta,
       path: '/posts/' + file.replace(/\.mdx?$/, ''),
+      mtime: stats.mtime,
       index
     }
   })

@@ -25,7 +25,7 @@ function BlogPost ({ path, meta, children }) {
             <PublishedAt date={meta.publishedAt} link={path} />
           </div>
         </header>
-        <div className='text-gray-800 e-content'>{children}</div>
+        <div className='text-gray-800 e-content mt-8'>{children}</div>
         <div className="mt-12">
           <Tags tags={meta.tags} />
         </div>

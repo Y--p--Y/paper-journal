@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PublishedAt from './utils/published-at'
 import Tags from './tags'
 
-const Post = ({ tags, title, summary, date, path }) => (
+const Post = ({ tags, title, summary, date, mtime, path }) => (
   <article className="pb-1 dotted-border border-b-4">
     <Link href={path}>
       <div className="cursor-pointer">
@@ -16,7 +16,8 @@ const Post = ({ tags, title, summary, date, path }) => (
             </a>
           </h2>
 
-          <PublishedAt link={path} date={date} />
+          <PublishedAt link={path} date={date} />,
+          更新于 <PublishedAt link={path} date={mtime} />
         </header>
         <div className="text-gray-700">{summary}</div>
       </div>
