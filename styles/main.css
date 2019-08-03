@@ -19,9 +19,12 @@ h4 {
 }
 
 .e-content img {
-  @apply my-1 max-w-full mx-auto;
+  @apply mt-4 max-w-full mx-auto;
 }
 
+.e-content figcaption {
+  @apply text-sm text-center text-gray-600;
+}
 ul li::before {
   content: '💡'
 }
