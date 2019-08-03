@@ -14,6 +14,7 @@ function Footer () {
       </section>
       <section className="w-56 text-left">
         <p className="mb-4"><strong>Contact</strong></p>
+        <p><a href={siteMeta.github}>Github</a></p>
       </section>
     </footer>
   )
