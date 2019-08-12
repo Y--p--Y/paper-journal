@@ -21,7 +21,7 @@ function BlogPost ({ path, meta, children }) {
         <header>
           <h1 className='p-name'>{meta.title}</h1>
 
-          <div>
+          <div className="text-gray-500 text-xs tracking-wide">
             <PublishedAt date={meta.publishedAt} link={path} />
           </div>
         </header>

@@ -6,7 +6,7 @@ function PublishedAt (props) {
   const { link, date } = props
   return (
     <Link href={link}>
-      <a href={link} className='u-url text-gray-600' mcolor='#aaa' {...props}>
+      <a href={link} {...props}>
         <time className='dt-published'>
           {format(parse(date), 'MMMM DD, YYYY')}
         </time>

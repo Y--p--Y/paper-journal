@@ -16,8 +16,10 @@ const Post = ({ tags, title, summary, date, mtime, path }) => (
             </a>
           </h2>
 
-          <PublishedAt link={path} date={date} />,
-          更新于 <PublishedAt link={path} date={mtime} />
+          <div className="text-gray-500 text-xs tracking-wide">
+            <PublishedAt link={path} date={date} />,
+            更新于 <PublishedAt link={path} date={mtime} />
+          </div>
         </header>
         <div className="text-gray-700">{summary}</div>
       </div>
