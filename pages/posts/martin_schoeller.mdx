@@ -1,0 +1,35 @@
+import { withRouter } from 'next/router'
+import BlogPost from '../../components/layouts/blog-post'
+
+export const meta = {
+  published: true,
+  publishedAt: '2019-9-16',
+  title: '👨 Martin Schoeller',
+  tags: ['scop', '讲座']
+}
+
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    {children}
+  </BlogPost>
+))
+
+Martin Schoeller is a New York-based photographer whose style of "hyper-detailed close ups" is distinguished by similar treatment of all subjects whether they are celebrities or unknown. His most recognizable work are his portraits, shot with similar lighting, backdrop, and tone.
+
+🏠 http://martinschoeller.com
+
+## Close Up
+
+https://www.martinschoeller.com/SERIES/Close%20Up/
+
+## Identical
+
+https://www.martinschoeller.com/SERIES/Identical/
+
+## Female Bodybuilders
+
+https://www.martinschoeller.com/SERIES/Female-Bodybuilders/
+
+## Portraits
+
+https://www.martinschoeller.com/SERIES/Portraits/
