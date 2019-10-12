@@ -1,0 +1,33 @@
+import { withRouter } from 'next/router'
+import BlogPost from '../../components/layouts/blog-post'
+
+export const meta = {
+  published: true,
+  publishedAt: '2019-10-12',
+  title: '👨 Jean-Luc Mylayne',
+  tags: ['bird']
+}
+
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    {children}
+  </BlogPost>
+))
+
+meditates on the convergence of art and ornithology
+
+Having abandoned the conveniences of home, car, and material ownership in pursuit of a nomadic life devoted to his art practice, Mylayne photographs birds in their natural environs. His ongoing project is bound in the intense intersection of observation, time, place, and natural history.
+
+[Articles & Reviews](https://gladstonegallery.com/artist/jean-luc-mylayne/press)
+
+## ❤️
+
+https://www.artsy.net/artwork/jean-luc-mylayne-together-a17-january-february-march-2007-for-parkett-100-slash-101
+
+![](/static/jean-luc_mylayne/jm425.jpg)
+
+![](/static/jean-luc_mylayne/1432239915-anc_visart-jeanlucmylayne-magnum.jpg)
+
+![](/static/jean-luc_mylayne/jm85.png)
+
+![](/static/jean-luc_mylayne/chaos.jpg)
